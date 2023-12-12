@@ -14,10 +14,10 @@ SC16IS750 spiuart = SC16IS750(SC16IS750_PROTOCOL_SPI,6);
 void setup() 
 {
     //delay(500);
-    Serial.begin(9600);
+    Serial.begin(921600);
     Serial.println("Start testing");
     // UART to Serial Bridge Initialization
-    spiuart.begin(9600);               //baudrate setting
+    spiuart.begin(921600);               //baudrate setting
     Serial.println("BAUDRATE SET");
     if (spiuart.ping()!=1) {
         Serial.println("Device not found");
