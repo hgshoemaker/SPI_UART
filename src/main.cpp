@@ -5,7 +5,7 @@
 #include <string.h>
 
 
-SC16IS750 spiuart = SC16IS750(SC16IS750_PROTOCOL_SPI,6); 
+SC16IS750 spiuart = SC16IS750(SC16IS750_PROTOCOL_SPI,18); 
 
 //Connect TX and RX with a wire and run this sketch
 //Remove A0, A1 resistors which set the I2C address
@@ -14,7 +14,7 @@ SC16IS750 spiuart = SC16IS750(SC16IS750_PROTOCOL_SPI,6);
 void setup() 
 {
     //delay(500);
-    Serial.begin(921600);
+    Serial.begin(115200);
     Serial.println("Start testing");
     // UART to Serial Bridge Initialization
     spiuart.begin(921600);               //baudrate setting
